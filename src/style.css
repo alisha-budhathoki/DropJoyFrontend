@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: lightblue;
+    cursor: grab;
+}
+
+.category {
+    padding: 20px;
+    border: 2px dashed #ccc;
+    background-color: #f8f8f8;
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.category.drag-over {
+    border-color: green;
+}

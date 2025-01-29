@@ -1,0 +1,174 @@
+/* General Styles */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #000;
+  /* Ensure sufficient color contrast */
+  background-color: #fff;
+  /* Avoid low contrast */
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-content {
+  max-width: 600px;
+}
+
+.header-title {
+  font-size: 2rem;
+  /* Larger and more prominent title */
+  margin: 0;
+}
+
+.header-description {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.language-toggle {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  /* White text for contrast */
+  background-color: #0078d7;
+  /* A richer blue for better aesthetics */
+  border: none;
+  border-radius: 25px;
+  /* Rounded button for a friendly look */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.language-toggle:hover {
+  background-color: #005bb5;
+  /* Slightly darker blue on hover */
+  transform: scale(1.05);
+  /* Zoom effect on hover */
+}
+
+.language-toggle:focus {
+  outline: 3px solid #ffc107;
+  /* High contrast focus ring for accessibility */
+}
+
+.language-toggle:active {
+  background-color: #003a75;
+  /* Even darker blue when pressed */
+  transform: scale(0.98);
+  /* Pressed-down effect */
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Enable wrapping for smaller screens */
+  justify-content: space-around;
+  gap: 20px;
+  /* Add spacing between sections */
+  padding: 20px;
+}
+
+/* Items Section */
+.items-pool {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  padding: 15px;
+  /* Increase padding for better usability */
+  background-color: #61dafb;
+  border-radius: 8px;
+  cursor: grab;
+  font-size: 1rem;
+  /* Legible font size */
+  color: #000;
+  /* Ensure sufficient color contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.item:focus,
+.item:hover {
+  background-color: #0091e6;
+  /* Ensure hover state is distinct */
+  transform: scale(1.05);
+  /* Add feedback on hover/focus */
+  outline: 3px solid #61dafb;
+  /* Accessible focus outline */
+}
+
+/* Categories Section */
+.categories {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.category {
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.category:focus,
+.category:hover {
+  outline: 3px solid #61dafb;
+  /* Accessible focus state */
+  border-color: #61dafb;
+  background-color: #e6f7ff;
+  /* Distinct hover/focus color */
+}
+
+.category.focused {
+  border-color: #61dafb;
+  background-color: #f0f8ff;
+}
+
+.category h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  /* Ensure sufficient text size */
+  color: #000;
+  /* Ensure text contrast */
+}
+
+/* Accessibility Enhancements */
+:focus {
+  outline: 3px solid #ffcc00;
+  /* High contrast focus outline for accessibility */
+  outline-offset: 3px;
+  /* Offset the outline for visibility */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
